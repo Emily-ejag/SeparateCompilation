@@ -4,9 +4,6 @@
 
 using namespace std;
 
-void printHouse(House& house);
-
-
 int main() {
     House myhouse;
     House yourHouse;
@@ -19,14 +16,8 @@ int main() {
     yourHouse.setNumWindows(10);
     yourHouse.setColor("blue");
 
-    printHouse(myhouse);
-    printHouse(yourHouse);
+    myhouse.printHouse(myhouse);
+    yourHouse.printHouse(yourHouse);
 
     return 0;
-}
-
-void printHouse(House& house) {
-    cout << "The house is " << house.getColor()
-        << " and has " << house.getNumStories()
-        << " stories and " << house.getNumWindows() << endl;
 }

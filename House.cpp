@@ -1,5 +1,8 @@
 #include "House.h"
 #include <string>
+#include <iostream>
+
+using namespace std;
 
 void House::setNumStories(int numStories) {
     this->numStories = numStories;
@@ -23,4 +26,10 @@ int House::getNumWindows() {
 
 string House::getColor() {
     return color;
+}
+
+void House::printHouse(House house){
+    cout << "The house is " << house.getColor()
+        << " and has " << house.getNumStories()
+        << " stories and " << house.getNumWindows() << endl;
 }

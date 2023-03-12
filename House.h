@@ -1,3 +1,9 @@
+#ifndef HOUSE_H
+#define HOUSE_H
+#endif
+
+
+
 #include <string>
 using namespace std;
 
@@ -14,6 +20,8 @@ public:
     int getNumWindows();
 
     string getColor();
+
+    void printHouse(House house);
 
 private:
     int numStories;
