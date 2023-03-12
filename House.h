@@ -9,6 +9,13 @@ using namespace std;
 
 class House {
 public:
+
+    House();
+
+    House(int numStories, int numWindows, string color);
+
+    ~House();
+
     void setNumStories(int numStories);
 
     void setNumWindows(int numWindows);
@@ -21,7 +28,7 @@ public:
 
     string getColor();
 
-    void printHouse(House house);
+    void printHouse();
 
 private:
     int numStories;

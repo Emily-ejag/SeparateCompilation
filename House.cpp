@@ -4,6 +4,23 @@
 
 using namespace std;
 
+House::House() {
+    this->numStories = 4;
+    this->numWindows = 6;
+    this->color = "white";
+}
+
+House::House(int numStories, int numWindows, string color) {
+    this->numStories = numStories;
+    this->numWindows = numWindows;
+    this->color = color;
+}
+
+House::~House() {
+    cout << "the " << getColor() << " house with " << getNumStories() << " stories and "
+        << getNumWindows() << " windows is being destroyed!" << endl;
+}
+
 void House::setNumStories(int numStories) {
     this->numStories = numStories;
 }
@@ -28,8 +45,8 @@ string House::getColor() {
     return color;
 }
 
-void House::printHouse(House house){
-    cout << "The house is " << house.getColor()
-        << " and has " << house.getNumStories()
-        << " stories and " << house.getNumWindows() << endl;
+void House::printHouse(){
+    cout << "The house is " << getColor()
+        << " and has " << getNumStories()
+        << " stories and " << getNumWindows() << endl;
 }
